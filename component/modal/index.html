@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cashbac Modal</title>
+    <link rel="stylesheet" href="../../public/css/modal/modal.css">
+    <script src="../../public/build/js/bundle.js"></script>
+</head>
+<body>
+    <div class="modal" id="sampleModal">
+        <div class="modal__content">
+            <div class="modal__header padding--normal-v padding--medium-h">
+                <div>
+                    Title
+                </div>
+                <div onclick="hideModal('sampleModal')">close</div>
+            </div>
+            <div class="modal__body padding--normal-v padding--medium-h">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Morbi eu sodales velit. Duis tristique orci sit amet ipsum molestie,
+                eget fermentum arcu auctor. Vestibulum laoreet augue blandit quam efficitur molestie.
+                Quisque convallis ultrices scelerisque. Fusce sit amet arcu et nisi porttitor elementum.
+                Donec vestibulum, nisl at pellentesque elementum, enim urna porta purus, id aliquam magna mauris sed tortor.
+                Aenean volutpat porta mauris in mattis. Morbi eget elit urna. Vivamus tempus non risus molestie feugiat. Nulla a consequat velit, et placerat purus. Ut non tristique dui.
+            </div>
+            <div class="modal__footer padding--normal-v padding--medium-h">
+                <button>
+                    Some button here
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div style="
+                max-width: 400px;
+                position: relative;
+                margin: 0 auto;
+                top: 24%;"
+    >
+        <input type="button" value="show modal" onclick="showModal('sampleModal')">
+    </div>
+
+</body>
+</html>

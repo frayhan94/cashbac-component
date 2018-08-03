@@ -1,0 +1,52 @@
+@mixin font-face($prefix, $file , $path: '../../assets/fonts') {
+  @font-face {
+    font-family: $prefix;
+    src: url('#{$path}/#{$file}/#{$prefix}.woff2') format('woff2'),
+    url('#{$path}/#{$file}/#{$prefix}.woff') format('woff');
+  }
+}
+
+@function rem($px-values, $font-size: $base-font-size) {
+  // Create an empty list that we can dump values into
+  $rem-values: ();
+  @each $value in $px-values {
+    // Check to see if value is 0, auto, or inherited
+    // If so, do nothing and output value
+    @if $value==0 or $value==auto or $value==inherit {
+      $rem-values: append($rem-values, $value);
+      // If the value is a pixel, convert to em value
+    }
+    @else if unit($value)=='px' {
+      $rem-values: append($rem-values, #{($value/$font-size)}rem);
+      // For everything else, keep as is
+    }
+    @else {
+      $rem-values: append($rem-values, $value);
+    }
+  }
+  @return $rem-values;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+
+@function color($name) {
+  @return map-get($color-list, $name);
+}
+
+@function size($size) {
+  @return rem(map-get($size-list, $size));
+}
+
+@function radius($radius) {
+  @return map-get($border-radius, $radius);
+}
+
+@function font-family($name) {
+  @return #{$name},-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}

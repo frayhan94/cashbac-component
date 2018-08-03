@@ -1,0 +1,20 @@
+{
+  "name": "Cashbac Component",
+  "description": "UIKIT Cashbac",
+  "main": "gulpfile.js",
+  "authors": [
+    "Faris Rayhan"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Cashbac"
+  ],
+  "homepage": "http://google.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

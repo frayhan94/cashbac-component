@@ -1,0 +1,84 @@
+$base-font-size: 14px;
+$max-width-container: 480px;
+
+$color-list: (
+        --primary: #191919,
+        --primary-ext-1: #5A5A5A,
+
+        --secondary: #ffffff,
+        --secondary-ext-1: #CA333F,
+
+        --tertiary:  #E9F6FF,
+        --tertiary-ext-1: #CA333F,
+
+        --almond: #EFDECD,
+        --bronze: #804A00,
+        --cream: #FFFDD0,
+        --grey: #8C92AC,
+        --mint: #F5FFFA,
+        --olive: #808000,
+        --pink: #FF1493,
+        --tan: #D2B48C,
+        --yellow: #FFE135,
+        --beige: #F5F5DC,
+        --brown: #993300,
+        --fuchsia: #FF00FF,
+        --khaki: #BDB76B,
+        --orange: #F57C00,
+        --torquise: #00CED1,
+        --black: #000000,
+        --camel: #C19A6B,
+        --gold: #CC9900,
+        --magenta: #8B008B,
+        --navy: #000080,
+        --red: #FF0000,
+        --tosca: #2ED1A2,
+        --blue: #0000FF,
+        --coffee: #6F4E37,
+        --green: #006400,
+        --maroon: #C32148,
+        --peach: #FFCBA4,
+        --silver: #C0C0C0,
+        --white: #FFFFFF,
+);
+
+$font-lists: (
+        --helvetica-normal 'Helvetica-Roman' 'Helvetica/Helvetica-Roman',
+        --helvetica-medium 'Helvetica-Medium' 'Helvetica/Helvetica-Medium',
+        --helvetica-bold 'Helvetica-Bold' 'Helvetica/Helvetica-Bold',
+        --lato-light 'Lato-Light' 'Lato/Lato-Light',
+        --lato-normal 'Lato-Regular' 'Lato/Lato-Regular',
+        --lato-semibold 'Lato-Semi-Bold' 'Lato/Lato-Semi-Bold',
+        --lato-bold 'Lato-Bold' 'Lato/Lato-Bold',
+);
+
+$font-size: (
+        --xsmall: 9px,
+        --small: 10px,
+        --normal: 12px,
+        --medium: 14px,
+        --large: 16px,
+        --xlarge: 18px
+);
+
+$size-list: (
+        --small: 21px,
+        --medium: 26px,
+        --large: 40px,
+        --font-small: 10px,
+        --font-medium: 11px,
+        --font-large: 12px,
+);
+
+$space-list: (
+        --small: 5px,
+        --normal: 10px,
+        --medium: 15px,
+        --large: 30px,
+        --none: 0px,
+);
+
+$border-radius: (
+        --small: 3px,
+        --medium: 4px,
+);

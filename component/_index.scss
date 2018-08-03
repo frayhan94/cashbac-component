@@ -1,0 +1,324 @@
+@import 'variable';
+@import 'mixin';
+
+@include font-face('Lato-Bold', 'Lato');
+
+* {
+  -webkit-text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:not(input):not(textarea):not(button) {
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  font-family: font-family('Lato-Regular');
+  font-size: $base-font-size;
+  position: relative;
+  color: color(--primary);
+  line-height: 20px;
+  background-color: #f1f3f4;
+  -webkit-overflow-scrolling: touch;
+}
+
+@each $value in $color-list {
+  .font-color#{nth($value, 1)} {
+    color: nth($value, 2);
+  }
+
+  .bg#{nth($value, 1)} {
+    background-color: nth($value, 2);
+  }
+
+  .border#{nth($value, 1)} {
+    border-color: nth($value, 2);
+  }
+}
+
+@each $value in $font-lists {
+  .font#{nth($value, 1)} {
+    font-family: font-family(nth($value, 2));
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  align-self: center;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  // position: relative;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+.--disable-flex {
+  display: block;
+  flex: none;
+}
+
+a {
+  color: #3c5a98;
+  text-decoration: none;
+  font-family: 'Lato-Regular';
+}
+
+p {
+  font-size: 13px;
+  text-decoration: none;
+  font-family: 'Lato-Regular';
+  color: #191919;
+  line-height: 1.4;
+}
+
+.can-copy {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: auto;
+  * {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: auto;
+  }
+
+}
+
+button {
+  -webkit-appearance: none;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-no-wrap {
+  white-space: nowrap;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.d-none {
+  display: none
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-elipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-elipsis-two-line {
+  overflow: hidden;
+  height: 30px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+// Margin
+@each $value in $space-list {
+  .margin#{nth($value, 1)} {
+    margin: nth($value, 2);
+  }
+  .margin#{nth($value, 1)}-v {
+    margin-top: nth($value, 2);
+    margin-bottom: nth($value, 2);
+  }
+  .margin#{nth($value, 1)}-h {
+    margin-left: nth($value, 2);
+    margin-right: nth($value, 2);
+  }
+  .margin#{nth($value, 1)}-t {
+    margin-top: nth($value, 2);
+  }
+  .margin#{nth($value, 1)}-b {
+    margin-bottom: nth($value, 2);
+  }
+  .margin#{nth($value, 1)}-l {
+    margin-left: nth($value, 2);
+  }
+  .margin#{nth($value, 1)}-r {
+    margin-right: nth($value, 2);
+  }
+}
+
+.no-margin {
+  &-v {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &-h {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &-l {
+    margin-left: 0;
+  }
+  &-r {
+    margin-right: 0;
+  }
+  &-t {
+    margin-top: 0;
+  }
+  &-b {
+    margin-bottom: 0;
+  }
+}
+
+// Padding
+@each $value in $space-list {
+  .padding#{nth($value, 1)} {
+    padding: nth($value, 2);
+  }
+  .padding#{nth($value, 1)}-v {
+    padding-top: nth($value, 2);
+    padding-bottom: nth($value, 2);
+  }
+  .padding#{nth($value, 1)}-h {
+    padding-left: nth($value, 2);
+    padding-right: nth($value, 2);
+  }
+  .padding#{nth($value, 1)}-t {
+    padding-top: nth($value, 2);
+  }
+  .padding#{nth($value, 1)}-b {
+    padding-bottom: nth($value, 2);
+  }
+  .padding#{nth($value, 1)}-l {
+    padding-left: nth($value, 2);
+  }
+  .padding#{nth($value, 1)}-r {
+    padding-right: nth($value, 2);
+  }
+}
+
+.no-padding {
+  &-v {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &-h {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &-l {
+    padding-left: 0;
+  }
+  &-r {
+    padding-right: 0;
+  }
+  &-t {
+    padding-top: 0;
+  }
+  &-b {
+    padding-bottom: 0;
+  }
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-middle {
+  align-items: center;
+}
+
+.flex-spaceBetween {
+  justify-content: space-between;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.flex-shrink-unset {
+  flex-shrink: unset;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #d8d8d8;
+}
+
+.thumbnail-small {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-height: 140px;
+    width: auto !important;
+  }
+}
+
+.horizontal-scroll {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
