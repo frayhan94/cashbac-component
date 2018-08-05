@@ -776,35 +776,17 @@ hr {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
 
-@keyframes fadeEffect {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-.tab {
-  overflow: hidden;
-  background-color: #ffffff;
-  border: 1px solid #f1f1f1;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 4px; }
-
-.tab button {
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 20px 76px;
-  transition: 0.3s;
-  font-size: 14px;
-  color: #D1D1D1; }
-  .tab button:hover, .tab button.active {
-    border-bottom: 4px solid #26ADE4; }
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-  animation: fadeEffect 1s; }
+input[type=text],
+input[type=email],
+input[type=password] {
+  height: 43px;
+  border: 1px solid #DDDDDD;
+  background-color: rgba(255, 255, 255, 0.87);
+  width: 100%;
+  border-radius: 3px;
+  padding-left: 10px;
+  outline: 0; }
+  input[type=text]:hover,
+  input[type=email]:hover,
+  input[type=password]:hover {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12); }

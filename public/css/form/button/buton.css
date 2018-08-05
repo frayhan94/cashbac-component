@@ -776,35 +776,11 @@ hr {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
 
-@keyframes fadeEffect {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-.tab {
-  overflow: hidden;
-  background-color: #ffffff;
-  border: 1px solid #f1f1f1;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 4px; }
-
-.tab button {
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 20px 76px;
-  transition: 0.3s;
-  font-size: 14px;
-  color: #D1D1D1; }
-  .tab button:hover, .tab button.active {
-    border-bottom: 4px solid #26ADE4; }
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-  animation: fadeEffect 1s; }
+.button--large {
+  border: 0;
+  height: 50px;
+  width: 191px;
+  background-color: #26ADE4;
+  box-shadow: 0 2px 0 0 #1A83AE;
+  color: #ffffff;
+  font-size: 16px; }

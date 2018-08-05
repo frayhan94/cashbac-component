@@ -2,14 +2,19 @@ $base-font-size: 14px;
 $max-width-container: 480px;
 
 $color-list: (
-        --primary: #191919,
+        /* Blue */
+        --primary: #26ADE4,
         --primary-ext-1: #5A5A5A,
 
+        /* white */
         --secondary: #ffffff,
-        --secondary-ext-1: #CA333F,
+        --secondary-ext-1: #f1f1f1,
 
-        --tertiary:  #E9F6FF,
-        --tertiary-ext-1: #CA333F,
+        /* Grey */
+
+        --tertiary:  #C1C1C1,
+        --tertiary-ext-1: #D1D1D1,
+        --tertiary-ext-2: #E1E1E1,
 
         --almond: #EFDECD,
         --bronze: #804A00,

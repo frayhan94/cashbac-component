@@ -40,7 +40,7 @@
 }
 
 @function size($size) {
-  @return rem(map-get($size-list, $size));
+  @return map-get($font-size, $size);
 }
 
 @function radius($radius) {

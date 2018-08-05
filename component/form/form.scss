@@ -1,0 +1,80 @@
+@import "../variable";
+@import "../mixin";
+@import "../index";
+
+.form {
+  height: auto;
+  border-radius: radius(--medium);
+  background-color: color(--secondary);
+  box-shadow: 0 2px 5px 0 color(--tertiary);
+  div,
+  span {
+    letter-spacing: 0.4px;
+  }
+}
+.form__header {
+  border-bottom: 1px solid color(--secondary-ext-1);
+  padding: 15px 30px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  div {
+    > span {
+      font-size: 12px;
+      color: color(--tertiary);
+    }
+  }
+}
+.form__footer {
+  border-top: 1px solid color(--secondary-ext-1);
+  padding: 15px 30px 30px 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.form__body {
+  padding: 15px 30px 30px 30px;
+}
+.column__one {
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+.column__two {
+  width: 50%;
+}
+.column__three {
+  width: 33.33%;
+  float: left;
+  padding: 10px;
+}
+.column__four {
+  width: 25%;
+}
+.column__five {
+  width: 20%;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  label {
+    font-size: size(--medium);
+    font-weight: 500;
+  }
+  .text-vertical__title {
+    margin-bottom: 5px;
+    color: color(--tertiary);
+    font-size: 13px;
+  }
+  .text-vertical__content {
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+.row {
+  margin-left: -10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,14 @@
+@import "../../variable";
+@import "../../mixin";
+@import "../../index";
+
+.button--large {
+  border: 0;
+  height: 50px;
+  width: 191px;
+  background-color: #26ADE4;
+  box-shadow: 0 2px 0 0 #1A83AE;
+  color: color(--secondary);
+  font-size: 16px;
+}
+
