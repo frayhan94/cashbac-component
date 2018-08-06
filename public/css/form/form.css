@@ -812,7 +812,8 @@ hr {
   padding: 10px; }
 
 .column__two {
-  width: 50%; }
+  width: 50%;
+  padding-right: 15px; }
 
 .column__three {
   width: 33.33%;
@@ -847,3 +848,28 @@ hr {
   content: "";
   display: table;
   clear: both; }
+
+.row--flex {
+  display: flex;
+  flex-direction: row; }
+
+/*Add additional class to element to set the fixed width of container*/
+.column--flex {
+  display: flex;
+  flex-direction: column; }
+
+.row--flex {
+  display: flex;
+  flex-direction: row; }
+  .row--flex div {
+    flex-grow: 1;
+    flex-shrink: 1; }
+
+.form__label--horizontal {
+  max-width: 70px; }
+
+.form__label--vertical {
+  margin-bottom: 10px; }
+
+.form__group {
+  margin-bottom: 10px; }

@@ -11,196 +11,246 @@
 <div style="max-width:960px;margin: 30px auto;">
 
     <div class="tab" style="margin-bottom: 30px;">
-            <button class="tablinks active" onclick="openTab(event, 'Small')" id="defaultOpen">Detail</button>
-            <button class="tablinks" onclick="openTab(event, 'Medium')">Terminal</button>
-            <button class="tablinks" onclick="openTab(event, 'Large')">Beacon Store</button>
+        <button class="tablinks active" onclick="openTab(event, 'Small')" id="defaultOpen">Detail</button>
+        <button class="tablinks" onclick="openTab(event, 'Medium')">Terminal</button>
+        <button class="tablinks" onclick="openTab(event, 'Large')">Beacon Store</button>
     </div>
 
     <div class="form">
         <div class="form__header margin--normal-t">
-                <div>
-                    <h3 class="margin--normal-t margin--small-b">Outlet Information</h3>
-                    <span>Fill below form of your detail outlet</span>
-                </div>
-                <div>
-                    <label class="switch margin--normal-t">
-                      <input type="checkbox">
-                      <span class="slider"></span>
-                    </label>
-                </div>
+            <div>
+                <h3 class="margin--normal-t margin--small-b">Outlet Information</h3>
+                <span>Fill below form of your detail outlet</span>
+            </div>
+            <div>
+                <label class="switch margin--normal-t">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
 
-         <div class="form__body">
-                <div class="row">
-                        <div class="column">
-                            <div class="margin--medium-b">
-                                <label>Outlet Name</label>
-                            </div>
-                            <div>
-                                <input type="text" />
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="margin--medium-b">
-                                <label>Phone Number</label>
-                            </div>
-                            <input type="text" />
-                        </div>
+        <div class="form__body">
+            <div class="row">
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Outlet Name</label>
                     </div>
-                     <div class="row">
-                            <div class="column">
-                                <div class="margin--medium-b">
-                                    <label>Number of POS</label>
-                                </div>
-                                <input type="text" />
-                            </div>
-                            <div class="column">
-                                <div class="margin--medium-b">
-                                    <label>Postal Code</label>
-                                </div>
-                                <input type="text" />
-                            </div>
+                    <div>
+                        <input type="text"/>
                     </div>
+                </div>
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Phone Number</label>
+                    </div>
+                    <input type="text"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Number of POS</label>
+                    </div>
+                    <input type="text"/>
+                </div>
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Postal Code</label>
+                    </div>
+                    <input type="text"/>
+                </div>
+            </div>
         </div>
     </div>
 
 
     <div class="form">
-            <div class="form__header margin--normal-t">
-                    <div>
-                        <h3 class="margin--small-b margin--medium-t">Outlet Manager</h3>
+        <div class="form__header margin--normal-t">
+            <div>
+                <h3 class="margin--small-b margin--medium-t">Outlet Manager</h3>
+            </div>
+        </div>
+
+        <div class="form__body">
+            <div class="row">
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Name</label>
                     </div>
+                    <div>
+                        <input type="text"/>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Password</label>
+                    </div>
+                    <input type="password"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Phone Number</label>
+                    </div>
+                    <input type="text"/>
+                </div>
+                <div class="column">
+                    <div class="margin--medium-b">
+                        <label>Password Confirm</label>
+                    </div>
+                    <input type="password"/>
+                </div>
+            </div>
+            <div class="row--flex">
+                <div class="column--flex column__two">
+                    <div class="form__group">
+                        <div class="form__label--vertical">
+                            <label>Latitude</label>
+                        </div>
+                        <div>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form__label--vertical">
+                            <label>Longitude</label>
+                        </div>
+                        <div>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row--flex column__two">
+                    <div class="form__label--horizontal">
+                        <label>Address</label>
+                    </div>
+                    <div>
+                        <textarea> </textarea>
+                    </div>
+                </div>
             </div>
 
-             <div class="form__body">
-                    <div class="row">
-                            <div class="column">
-                                <div class="margin--medium-b">
-                                    <label>Name</label>
-                                </div>
-                                <div>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="margin--medium-b">
-                                    <label>Password</label>
-                                </div>
-                                <input type="password" />
-                            </div>
+            <div class="list" style="margin-top:30px;">
+                <div class="list__header">
+                        <h3>Operation Hours</h3>
+                </div>
+                <div class="list__body">
+                    <div class="list__item">
+                        <div class="text">
+                            <strong>
+                                Sunday - Monday
+                            </strong>
                         </div>
-                         <div class="row">
-                                <div class="column">
-                                    <div class="margin--medium-b">
-                                        <label>Phone Number</label>
-                                    </div>
-                                    <input type="text" />
-                                </div>
-                                <div class="column">
-                                    <div class="margin--medium-b">
-                                        <label>Password Confirm</label>
-                                    </div>
-                                    <input type="password" />
-                                </div>
+                        <div class="icon">
+                            <span>Add</span>
+                            <span>Delete</span>
                         </div>
-                        <div class="row">
-                            <div class="column">
-                                <div class="margin--medium-b">
-                                    <label>Email Number</label>
-                                </div>
-                                <input type="text" />
-                                </div>
-                        </div>
+                    </div>
+                    <div class="list__item">
+                          <div class="text">
+                                <strong>
+                                    Tuesday - Wednesday
+                                </strong>
+                          </div>
+                           <div class="icon">
+                              <span>Add</span>
+                              <span>Delete</span>
+                          </div>
+                    </div>
+                    <div class="list__item">
+                          <div class="text">
+                                <strong>
+                                    Thursday - Friday
+                                </strong>
+                          </div>
+                          <div class="icon">
+                              <span>Add</span>
+                              <span>Delete</span>
+                          </div>
+                    </div>
+                </div>
+                <div class="list__footer">
+                       <div>
+                           Add Other Operation Hour
+                       </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form">
+        <div class="form__header margin--normal-t">
+            <div>
+                <h3 class="margin--small-b margin--medium-t">Bank Account Information</h3>
             </div>
         </div>
 
-        <div class="form">
-            <div class="form__body">
-                <div class="horizontal">
-                        <div>
-                                <label>New Customer</label>
-                                <input type="text" />
-                        </div>
+        <div class="form__body">
+            <div class="row">
+                <div class="column__one">
+                    <div class="margin--small-b">
+                        <strong>
+                            Do you want to use the same bank account that you set in the merchant section ?
+                        </strong>
+                    </div>
                 </div>
             </div>
-            <div class="form__footer">
-
+            <div class="row">
+                <div class="column">
+                    <div class="text-vertical__title">
+                        Bank Name
+                    </div>
+                    <div class="text-vertical__content">
+                        Bank Central Asia
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="text-vertical__title">
+                        Account Name
+                    </div>
+                    <div class="text-vertical__content">
+                        PT. Hari & Maemunah Bersatu
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="text-vertical__title">
+                        Bank Branch
+                    </div>
+                    <div class="text-vertical__content">
+                        Padalarang, Bandung
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="text-vertical__title">
+                        Account Number
+                    </div>
+                    <div class="text-vertical__content">
+                        198237563
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="text-vertical__title">
+                        Email for Payment Report
+                    </div>
+                    <div class="text-vertical__content">
+                        haandma@haandma.com
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="form">
-                <div class="form__header margin--normal-t">
-                        <div>
-                            <h3 class="margin--small-b margin--medium-t">Bank Account Information</h3>
-                        </div>
-                </div>
-
-                 <div class="form__body">
-                        <div class="row">
-                                <div class="column__one">
-                                    <div class="margin--small-b">
-                                        <strong>
-                                            Do you want to use the same bank account that you set in the merchant section ?
-                                        </strong>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="row">
-                                <div class="column">
-                                       <div class="text-vertical__title">
-                                            Bank  Name
-                                       </div>
-                                       <div class="text-vertical__content">
-                                            Bank Central Asia
-                                       </div>
-                                </div>
-                                <div class="column">
-                                        <div class="text-vertical__title">
-                                            Account Name
-                                        </div>
-                                        <div class="text-vertical__content">
-                                            PT. Hari & Maemunah Bersatu
-                                        </div>
-                                </div>
-                        </div>
-                        <div class="row">
-                                <div class="column">
-                                   <div class="text-vertical__title">
-                                        Bank  Branch
-                                   </div>
-                                   <div class="text-vertical__content">
-                                        Padalarang, Bandung
-                                  </div>
-                                </div>
-                                <div class="column">
-                                       <div class="text-vertical__title">
-                                            Account Number
-                                       </div>
-                                       <div class="text-vertical__content">
-                                             198237563
-                                      </div>
-                                </div>
-                        </div>
-                        <div class="row">
-                            <div class="column">
-                                <div class="text-vertical__title">
-                                    Email for Payment Report
-                                </div>
-                                <div class="text-vertical__content">
-                                    haandma@haandma.com
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="form__footer">
-                    <Button class="button--large">
-                        Save
-                    </Button>
-                </div>
-            </div>
-
-</div>
-
+        <div class="form__footer">
+            <Button class="button--large">
+                Save
+            </Button>
+        </div>
+    </div>
 </div>
 </body>
 </html>

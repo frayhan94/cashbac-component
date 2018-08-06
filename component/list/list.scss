@@ -1,0 +1,29 @@
+@import "../variable";
+@import "../mixin";
+.list {
+  box-shadow: 0 2px 5px 0 color(--tertiary);
+  padding: 15px 20px 15px 20px;
+}
+.list__header {
+  margin-bottom: 10px;
+}
+.list__body {
+  margin-bottom: 10px;
+  .list__item {
+    font-size: 12px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .text {
+
+    }
+    .icon {
+      font-size: 10px;
+      cursor: pointer;
+      + span {
+        margin-right: 10px;
+      }
+    }
+  }
+}

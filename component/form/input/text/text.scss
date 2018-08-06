@@ -2,6 +2,7 @@
 @import "../../../mixin";
 @import "../../../index";
 
+textarea,
 input[type=text],
 input[type=email],
 input[type=password]
@@ -17,4 +18,11 @@ input[type=password]
   &:hover {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   }
+}
+
+textarea {
+  height: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }

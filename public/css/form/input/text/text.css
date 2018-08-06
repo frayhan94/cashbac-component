@@ -776,6 +776,7 @@ hr {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
 
+textarea,
 input[type=text],
 input[type=email],
 input[type=password] {
@@ -787,7 +788,14 @@ input[type=password] {
   padding-left: 10px;
   outline: 0;
   font-size: 14px; }
+  textarea:hover,
   input[type=text]:hover,
   input[type=email]:hover,
   input[type=password]:hover {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12); }
+
+textarea {
+  height: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px; }
