@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lato-Bold";
-  src: url("../../assets/fonts/Lato/Lato-Bold.woff2") format("woff2"), url("../../assets/fonts/Lato/Lato-Bold.woff") format("woff"); }
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins/Poppins.woff2") format("woff2"), url("../../assets/fonts/Poppins/Poppins.woff") format("woff"); }
 
 * {
   -webkit-text-size-adjust: none;
@@ -15,7 +15,7 @@
 
 html,
 body {
-  font-family: Lato-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-size: 14px;
   position: relative;
   line-height: 20px;

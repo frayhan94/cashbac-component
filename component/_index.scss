@@ -1,7 +1,7 @@
 @import 'variable';
 @import 'mixin';
 
-@include font-face('Lato-Bold', 'Lato');
+@include font-face('Poppins', 'Poppins');
 
 * {
   -webkit-text-size-adjust: none;
@@ -18,7 +18,7 @@
 
 html,
 body {
-  font-family: font-family('Lato-Regular');
+  font-family: font-family('Poppins');
   font-size: $base-font-size;
   position: relative;
   line-height: 20px;
