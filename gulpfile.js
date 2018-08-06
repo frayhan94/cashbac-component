@@ -26,10 +26,6 @@ const AUTOPREFIXER_BROWSERS = [
     'bb >= 10'
 ];
 
-gulp.task('watch', function() {
-    gulp.watch('./public/js/**/*.js', ['pack-js']);
-    gulp.watch('./public/css/**/*.css', ['pack-css']);
-});
 gulp.task('compile-scss',function() {
     return gulp.src('./component/**/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -92,6 +88,13 @@ gulp.task('stylesheet', function() {
             'styles'
     );
 });
+
+gulp.task('watch', function() {
+    gulp.watch('./component/**/*.scss', ['stylesheet']);
+    gulp.watch('./component/**/*.js', ['scripts']);
+});
+
+
 
 // Gulp task to minify all files
 gulp.task('default', ['clean-js','clean-css'], function () {
