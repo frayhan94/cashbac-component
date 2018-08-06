@@ -11,6 +11,7 @@ let rev = require('gulp-rev');
 let sass = require('gulp-sass');
 let babel = require('gulp-babel');
 let sourcemaps = require('gulp-sourcemaps');
+let browserSync = require('browser-sync').create();
 /* let gulpDocumentation = require('gulp-documentation'); */
 
 // Set the browser that you want to support
@@ -38,6 +39,9 @@ gulp.task('styles', function () {
         .pipe(concat('stylesheet.css'))
         .pipe(cleanCss())
         .pipe(gulp.dest('./public/build/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 /*
@@ -89,7 +93,7 @@ gulp.task('stylesheet', function() {
     );
 });
 
-gulp.task('watch', function() {
+gulp.task('watch',  ['browserSync','stylesheet'], function() {
     gulp.watch('./component/**/*.scss', ['stylesheet']);
     gulp.watch('./component/**/*.js', ['scripts']);
 });
@@ -104,6 +108,16 @@ gulp.task('default', ['clean-js','clean-css'], function () {
         'scripts'
     );
 });
+
+
+gulp.task('browserSync', function() {
+    browserSync.init({
+        server: {
+            baseDir: 'app'
+        },
+    })
+})
+
 
 /*
     gulp.task('documentation-html-example', function () {
