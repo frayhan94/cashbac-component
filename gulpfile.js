@@ -12,6 +12,7 @@ let sass = require('gulp-sass');
 let babel = require('gulp-babel');
 let sourcemaps = require('gulp-sourcemaps');
 let browserSync = require('browser-sync').create();
+let twig = require('gulp-twig');
 /* let gulpDocumentation = require('gulp-documentation'); */
 
 // Set the browser that you want to support
@@ -56,7 +57,8 @@ gulp.task('scripts', function() {
     return gulp.src([
         './component/modal/modal.js',
         './component/tab/tab.js',
-        './component/thumbnail/thumbnail.js'
+        './component/thumbnail/thumbnail.js',
+        './component/form/input/checkbox/checkbox.js'
     ])
     // Minify the file
         .pipe(sourcemaps.init())
@@ -70,7 +72,10 @@ gulp.task('scripts', function() {
             },
             noSource: true
         }))
-        .pipe(gulp.dest('./public/build/js'));
+        .pipe(gulp.dest('./public/build/js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 gulp.task('clean-js', function () {
@@ -93,7 +98,7 @@ gulp.task('stylesheet', function() {
     );
 });
 
-gulp.task('watch',  ['browserSync','stylesheet'], function() {
+gulp.task('watch',  ['browserSync','stylesheet','scripts'], function() {
     gulp.watch('./component/**/*.scss', ['stylesheet']);
     gulp.watch('./component/**/*.js', ['scripts']);
 });
@@ -113,10 +118,17 @@ gulp.task('default', ['clean-js','clean-css'], function () {
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: 'app'
+            baseDir: 'dist'
         },
     })
-})
+});
+
+// Compile Twig templates to HTML
+gulp.task('templates', function() {
+    return gulp.src('src/*.html') // run the Twig template parser on all .html files in the "src" directory
+        .pipe(twig())
+        .pipe(gulp.dest('dist')); // output the rendered HTML files to the "dist" directory
+});
 
 
 /*

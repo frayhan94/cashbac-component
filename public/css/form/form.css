@@ -802,6 +802,8 @@ hr {
   padding: 15px 30px 30px 30px;
   display: flex;
   justify-content: flex-end; }
+  .form__footer button:first-child {
+    margin-right: 20px; }
 
 .form__body {
   padding: 15px 30px 30px 30px; }

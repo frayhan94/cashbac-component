@@ -1,8 +1,10 @@
-/* The switch - the box around the slider */
+@import "../../../variable";
+@import "../../../mixin";
+
 .switch {
   position: relative;
   display: inline-block;
-  width: 80px;
+  width: 125px;
   height: 34px;
 }
 
@@ -11,15 +13,31 @@
 
 /* The slider */
 .slider {
+  display: flex;
   position: absolute;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #f5c74b;
   -webkit-transition: .4s;
   transition: .4s;
+  .idle {
+    color: color(--secondary);
+    position: absolute;
+    font-size: 16px;
+    right: 0;
+    align-self: center;
+    margin-right: 12px;
+  }
+  .active {
+    color: color(--secondary);
+    position: absolute;
+    font-size: 16px;
+    margin-left: 12px;
+    align-self: center;
+  }
 }
 
 .slider:before {
@@ -27,7 +45,7 @@
   content: "";
   height: 26px;
   width: 26px;
-  left: 14px;
+  left: 9px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
@@ -36,6 +54,16 @@
 
 input:checked + .slider {
   background-color: #2196F3;
+  > .idle {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+  &:before {
+    left: 63px;
+    left: 63px;
+  }
 }
 
 input:focus + .slider {

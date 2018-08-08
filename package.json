@@ -8,7 +8,8 @@
     "test": "tests"
   },
   "dependencies": {
-    "del": "^3.0.0"
+    "del": "^3.0.0",
+    "md-date-time-picker": "^2.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -24,6 +25,7 @@
     "gulp-rev": "^8.1.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-twig": "^1.2.0",
     "run-sequence": "^2.2.1"
   },
   "scripts": {

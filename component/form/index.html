@@ -2,18 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cashbac Modal</title>
+    <title>Cashbac Form</title>
     <link rel="stylesheet" href="../../public/build/css/stylesheet.css">
     <script src="../../public/build/js/bundle.js"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+     <link rel="stylesheet" href="../../node_modules/md-date-time-picker/dist/css/themes/light/light-blue/mdDateTimePicker.css" />
+     <script src="../../node_modules/md-date-time-picker/dist/js/moment.min.js"></script>
+     <script src="../../node_modules/md-date-time-picker/dist/js/draggabilly.pkgd.min.js"></script>
+     <script src="../../node_modules/md-date-time-picker/dist/js/mdDateTimePicker.min.js"></script>
 </head>
 <body>
 
 <div style="max-width:960px;margin: 30px auto;">
 
+    <div class="tab--pill--horizontal pill--small" style="margin-bottom: 30px;">
+         <div class="active tablinks active" onclick="openTab(event, 'Ambience')" id="defaultOpen">Ambience</div>
+         <div class="tablinks" onclick="openTab(event, 'Food')">Food</div>
+         <div class="tablinks" onclick="openTab(event, 'Menu')">Menu</div>
+    </div>
+
+    <div id="Ambience" class="tabcontent">
+
+    </div>
+
+    <div id="Food" class="tabcontent">
+
+    </div>
+
+    <div id="Menu" class="tabcontent">
+
+    </div>
+
     <div class="tab" style="margin-bottom: 30px;">
-        <button class="tablinks active" onclick="openTab(event, 'Small')" id="defaultOpen">Detail</button>
-        <button class="tablinks" onclick="openTab(event, 'Medium')">Terminal</button>
-        <button class="tablinks" onclick="openTab(event, 'Large')">Beacon Store</button>
+        <div class="tablinks active" onclick="openTab(event, 'Small')" id="defaultOpen">Detail</div>
+        <div class="tablinks" onclick="openTab(event, 'Medium')">Terminal</div>
+        <div class="tablinks" onclick="openTab(event, 'Large')">Beacon Store</div>
     </div>
 
     <div class="form">
@@ -25,7 +48,14 @@
             <div>
                 <label class="switch margin--normal-t">
                     <input type="checkbox">
-                    <span class="slider"></span>
+                    <span class="slider">
+                        <span class="idle" id="idleOutletInformation">
+                            Invisible
+                        </span>
+                        <span class="active d-none" id="activeOutletInformation">
+                            Visible
+                        </span>
+                    </span>
                 </label>
             </div>
         </div>
@@ -132,6 +162,30 @@
                 </div>
             </div>
 
+            <div class="list" style="margin-top:30px;">
+                 <div class="list__header">
+                   <h3><Operation Hours/h3>
+                 </div>
+                 <div class="list__body" style="width:50%;">
+                        <div class="time">
+                            <div class="day">
+                                <input type="checkbox" />
+                                <span class="day__name">Sunday</span>
+                            </div>
+                            <div class="hours">
+                                <div class="hours__from">
+                                    <input type="time">
+                                </div>
+                                <div class="hours__separator">
+                                    <span>-</span>
+                                </div>
+                                <div class="hours__to">
+                                    <input type="time">
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+            </div>
             <div class="list" style="margin-top:30px;">
                 <div class="list__header">
                         <h3>Operation Hours</h3>
@@ -246,11 +300,29 @@
             </div>
         </div>
         <div class="form__footer">
-            <Button class="button--large">
+            <Button class="button--large button--primary" id="id-of-button-to-open-it">
                 Save
+            </Button>
+            <Button class="button--large button--secondary">
+                            cancel
             </Button>
         </div>
     </div>
 </div>
 </body>
+<script>
+
+    var dialog = new mdDateTimePicker.default({
+                          type: 'time'
+                        });
+
+
+
+    var toggleButton = document.getElementById('id-of-button-to-open-it');
+    toggleButton.addEventListener('click', function() {
+        dialog.toggle();
+    });
+
+
+</script>
 </html>

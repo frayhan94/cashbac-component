@@ -26,4 +26,21 @@
       }
     }
   }
+  .time {
+    display: flex;
+    justify-content: space-between;
+    .day {
+      > span {
+        margin-left: 5px;
+        font-size: 12px;
+      }
+    }
+    .hours {
+      display: flex;
+      .hours__separator {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
 }
