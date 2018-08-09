@@ -1,8 +1,9 @@
 @import "../../../variable";
 @import "../../../mixin";
-@import "../../../index";
 
 textarea,
+input[type=date],
+input[type=time],
 input[type=text],
 input[type=email],
 input[type=password]

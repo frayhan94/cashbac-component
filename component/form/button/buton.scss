@@ -1,6 +1,12 @@
 @import "../../variable";
 @import "../../mixin";
 
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .button--large {
   height: 50px;
   width: 191px;
@@ -24,5 +30,9 @@
   border: 1px solid color(--tertiary);
   background-color: color(--secondary);
   color: color(--tertiary);
+}
+
+.button--rounded {
+  border-radius: 25px;
 }
 

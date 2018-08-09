@@ -1,7 +1,81 @@
 .thumbnail {
-  border: 1px solid #ddd;
+  border: 1px solid #C1C1C1;
   border-radius: 4px;
   padding: 5px;
-  width: 150px; }
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow ease-in-out .1s; }
   .thumbnail:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); }
+    box-shadow: 0 0 2px 1px #C1C1C1; }
+  .thumbnail .thumbnail__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px 20px 15px; }
+    .thumbnail .thumbnail__header .photo-total {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.3px; }
+      .thumbnail .thumbnail__header .photo-total .number {
+        color: #C1C1C1; }
+    .thumbnail .thumbnail__header .photo-action {
+      font-size: 16px;
+      color: #26ADE4;
+      letter-spacing: 0.3px; }
+      .thumbnail .thumbnail__header .photo-action:hover {
+        cursor: pointer; }
+      .thumbnail .thumbnail__header .photo-action > span {
+        padding: 5px 15px 5px 15px;
+        margin-right: 15px;
+        transition: background ease-in-out .5s; }
+        .thumbnail .thumbnail__header .photo-action > span:hover {
+          background: #C1C1C1; }
+  .thumbnail .thumbnail__body {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .thumbnail .thumbnail__body .image__item:nth-child(odd) {
+      margin-right: 30px; }
+    .thumbnail .thumbnail__body .scroll-down {
+      flex-grow: 1;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color: #26ADE4;
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 30px; }
+      .thumbnail .thumbnail__body .scroll-down:hover {
+        cursor: pointer; }
+    .thumbnail .thumbnail__body .image__item {
+      position: relative;
+      width: 444px;
+      margin-bottom: 30px; }
+      .thumbnail .thumbnail__body .image__item .thumbnail {
+        background: #ffffff;
+        max-width: 100px;
+        height: auto;
+        position: absolute;
+        top: 25px;
+        left: 19px;
+        border-radius: 4px;
+        padding: 5px; }
+        .thumbnail .thumbnail__body .image__item .thumbnail > img {
+          padding-left: 3px;
+          padding-right: 3px;
+          padding-top: 4px; }
+        .thumbnail .thumbnail__body .image__item .thumbnail:hover {
+          cursor: pointer; }
+        .thumbnail .thumbnail__body .image__item .thumbnail .text {
+          font-size: 10px;
+          text-align: center;
+          margin-top: 5px; }
+  .thumbnail .thumbnail__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-right: 15px; }
+    .thumbnail .thumbnail__footer button:last-child {
+      margin-left: 20px; }

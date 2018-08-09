@@ -1,0 +1,13 @@
+{% extends "layout/default.html" %}
+{% set title = "Cashbac Component" %}
+{% set pageTitle = "A intuitive UI Collection for Cashbac " %}
+
+<h3>{{ pageTitle }}</h3>
+
+{% block content %}
+    {% include "component/form/index.html" %}
+    {% include "component/list/index.html" %}
+    {% include "component/modal/index.html" %}
+    {% include "component/tab/index.html" %}
+    {% include "component/thumbnail/index.html" %}
+{% endblock %}

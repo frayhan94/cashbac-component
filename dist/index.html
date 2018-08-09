@@ -1,0 +1,633 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cashbac Component</title>
+    <link rel="stylesheet" href="../../css/stylesheet.css">
+    <script src="../../js/bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <style>
+            .navigation {
+                position: fixed;
+                left: 0;
+                top: 0;
+                background: #26ade4;
+                width: 200px;
+                height: 100%;
+
+            }
+            .content {
+                position: absolute;
+                left: 200px;
+                right: 11px;
+                padding: 30px;
+            }
+            ul li {
+                list-style: none;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+            }
+            ul li a {
+                font-size: 20px;
+                color: white;
+            }
+            ul li:hover {
+                background: white;
+            }
+            ul li:hover a {
+                color: #26ade4;
+            }
+            .pushToTop30 {
+                margin-top: 30px;
+            }
+            .pushToBottom30 {
+                margin-bottom: 30px;
+            }
+    </style>
+</head>
+<body>
+<div>
+    <div class="navigation">
+          <ul>
+                <li>
+                    <a href="#">
+                        Form
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        List
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Modal
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Tab
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Thumbnail
+                    </a>
+                </li>
+          </ul>
+    </div>
+    <div class="content">
+            <div class="pushToBottom30">
+                <h1 class="pushToBottom30">
+                    Cashbac Component
+                </h1>
+                <div class="pushToBottom30">
+                A comprehensive UI Module for building website easily. Built with love.
+                </div>
+                 <div class="pushToBottom30">
+                     <h1>
+                        Installation
+                    </h1>
+                </div>
+                    <code >
+                          npm install --save cashbac-component
+                    </code>
+            </div>
+                <div class="pushToBottom30">
+    <h1>Form</h1>
+</div>
+
+<div class="form pushToBottom30">
+    <div class="form__header">
+        <div>
+            <h3 class="title">Outlet Information</h3>
+            <span class="sub-title">Fill below form of your detail outlet</span>
+        </div>
+        <div>
+            <label class="switch margin--normal-t">
+                <input type="checkbox">
+                <span class="slider">
+                         <span class="idle" id="idleOutletInformation">
+                             Invisible
+                         </span>
+                         <span class="active d-none" id="activeOutletInformation">
+                             Visible
+                         </span>
+                     </span>
+            </label>
+        </div>
+    </div>
+
+    <div class="form__body">
+        <div class="row">
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Outlet Name</label>
+                </div>
+                <div>
+                    <input type="text"/>
+                </div>
+            </div>
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Phone Number</label>
+                </div>
+                <input type="text"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Number of POS</label>
+                </div>
+                <input type="text"/>
+            </div>
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Postal Code</label>
+                </div>
+                <input type="text"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column__one">
+                <div class="margin--small-b">
+                    <strong>
+                        Do you want to use the same bank account that you set in the merchant section ?
+                    </strong>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="text-vertical__title">
+                    Bank Name
+                </div>
+                <div class="text-vertical__content">
+                    Bank Central Asia
+                </div>
+            </div>
+            <div class="column">
+                <div class="text-vertical__title">
+                    Account Name
+                </div>
+                <div class="text-vertical__content">
+                    PT. Hari & Maemunah Bersatu
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="text-vertical__title">
+                    Bank Branch
+                </div>
+                <div class="text-vertical__content">
+                    Padalarang, Bandung
+                </div>
+            </div>
+            <div class="column">
+                <div class="text-vertical__title">
+                    Account Number
+                </div>
+                <div class="text-vertical__content">
+                    198237563
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="text-vertical__title">
+                    Email for Payment Report
+                </div>
+                <div class="text-vertical__content">
+                    haandma@haandma.com
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Name</label>
+                </div>
+                <div>
+                    <input type="text"/>
+                </div>
+            </div>
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Password</label>
+                </div>
+                <input type="password"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Phone Number</label>
+                </div>
+                <input type="text"/>
+            </div>
+            <div class="column">
+                <div class="margin--medium-b">
+                    <label>Password Confirm</label>
+                </div>
+                <input type="password"/>
+            </div>
+        </div>
+        <div class="row--flex">
+            <div class="column--flex column__two">
+                <div class="form__group">
+                    <div class="form__label--vertical">
+                        <label>Latitude</label>
+                    </div>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+                <div>
+                    <div class="form__label--vertical">
+                        <label>Longitude</label>
+                    </div>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row--flex column__two">
+                <div class="form__label--horizontal">
+                    <label>Address</label>
+                </div>
+                <div>
+                    <textarea> </textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="list" style="margin-top:30px;">
+            <div class="list__header">
+                <h3>
+                    Operation Hours
+                </h3>
+            </div>
+            <div class="list__body" style="width:50%;">
+                <div class="time">
+                    <div class="day">
+                        <input type="checkbox"/>
+                        <span class="day__name">Sunday</span>
+                    </div>
+                    <div class="hours">
+                        <div class="hours__from">
+                            <input type="time">
+                        </div>
+                        <div class="hours__separator">
+                            <span>-</span>
+                        </div>
+                        <div class="hours__to">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="day">
+                        <input type="checkbox"/>
+                        <span class="day__name">Monday</span>
+                    </div>
+                    <div class="hours">
+                        <div class="hours__from">
+                            <input type="time">
+                        </div>
+                        <div class="hours__separator">
+                            <span>-</span>
+                        </div>
+                        <div class="hours__to">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="day">
+                        <input type="checkbox"/>
+                        <span class="day__name">Tuesday</span>
+                    </div>
+                    <div class="hours">
+                        <div class="hours__from">
+                            <input type="time">
+                        </div>
+                        <div class="hours__separator">
+                            <span>-</span>
+                        </div>
+                        <div class="hours__to">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="day">
+                        <input type="checkbox"/>
+                        <span class="day__name">Wednesday</span>
+                    </div>
+                    <div class="hours">
+                        <div class="hours__from">
+                            <input type="time">
+                        </div>
+                        <div class="hours__separator">
+                            <span>-</span>
+                        </div>
+                        <div class="hours__to">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="day">
+                        <input type="checkbox"/>
+                        <span class="day__name">Thursday</span>
+                    </div>
+                    <div class="hours">
+                        <div class="hours__from">
+                            <input type="time">
+                        </div>
+                        <div class="hours__separator">
+                            <span>-</span>
+                        </div>
+                        <div class="hours__to">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="day">
+                        <input type="checkbox"/>
+                        <span class="day__name">Friday</span>
+                    </div>
+                    <div class="hours">
+                        <div class="hours__from">
+                            <input type="time">
+                        </div>
+                        <div class="hours__separator">
+                            <span>-</span>
+                        </div>
+                        <div class="hours__to">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="day">
+                        <input type="checkbox"/>
+                        <span class="day__name">Saturday</span>
+                    </div>
+                    <div class="hours">
+                        <div class="hours__from">
+                            <input type="time">
+                        </div>
+                        <div class="hours__separator">
+                            <span>-</span>
+                        </div>
+                        <div class="hours__to">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list" style="margin-top:30px;">
+            <div class="list__header">
+                <h3>Operation Hours</h3>
+            </div>
+            <div class="list__body">
+                <div class="list__item">
+                    <div class="text">
+                        <strong>
+                            Sunday - Monday
+                        </strong>
+                    </div>
+                    <div class="icon">
+                        <span>Add</span>
+                        <span>Delete</span>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="text">
+                        <strong>
+                            Tuesday - Wednesday
+                        </strong>
+                    </div>
+                    <div class="icon">
+                        <span>Add</span>
+                        <span>Delete</span>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="text">
+                        <strong>
+                            Thursday - Friday
+                        </strong>
+                    </div>
+                    <div class="icon">
+                        <span>Add</span>
+                        <span>Delete</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list__footer">
+                <div>
+                    Add Other Operation Hour
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form__footer">
+        <Button class="button--large button--primary">
+            Save
+        </Button>
+        <Button class="button--large button--secondary">
+            Cancel
+        </Button>
+    </div>
+</div>        <div class="pushToBottom30">
+    <h1>Modal</h1>
+</div>
+
+<div class="modal" id="sampleModal">
+    <div class="modal__content">
+        <div class="modal__header">
+            <div class="text">
+                <div class="title">
+                    <h3>
+                        Populated Data from Zomato
+                    </h3>
+                </div>
+                <div class="sub-title">
+                    <span>Give checklist if you think the data is valid</span>
+                </div>
+            </div>
+            <div class="action" onclick="hideModal('sampleModal')">
+                <span>
+                    close
+                </span>
+            </div>
+        </div>
+        <div class="modal__body">
+            <div class="tab">
+                <div class="tablinks active" onclick="openTab(event, 'Small')">Informations</div>
+                <div class="tablinks" onclick="openTab(event, 'Medium')">Photos</div>
+                <div class="tablinks" onclick="openTab(event, 'Large')">Menu</div>
+            </div>
+            <div class="fill">
+                <div class="list">
+                    <div class="list__header">
+                        <div class="text">
+                            <h3>
+
+                            </h3>
+                        </div>
+                        <div class="icon">
+
+                        </div>
+                    </div>
+                    <div class="list__body">
+
+                    </div>
+                </div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </div>
+        </div>
+        <div class="modal__footer">
+            <div class="left">
+                <span>
+                    Check other tabs before you populate
+                </span>
+            </div>
+            <div class="right">
+                    <Button class="button--large button--primary button--rounded">
+                               Next
+                    </Button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <Button class="button--large button--primary pushToBottom30" onclick="showModal('sampleModal')">
+            Show Modal
+</Button>    <div class="pushToBottom30">
+    <h1>Tab pill</h1>
+</div>
+
+<div class="tab--pill--horizontal pill--small" style="margin-bottom: 30px;">
+        <div class="tablinks" onclick="openTab(event, 'Ambience')" id="defaultOpen">Ambience</div>
+        <div class="tablinks" onclick="openTab(event, 'Food')">Food</div>
+        <div class="tablinks" onclick="openTab(event, 'Menu')">Menu</div>
+</div>
+
+<div id="Ambience" class="tabcontent">
+    Ambience
+</div>
+<div id="Food" class="tabcontent">
+    Food
+</div>
+<div id="Menu" class="tabcontent">
+    Menu
+</div>
+<script>
+    document.getElementById("defaultOpen").click();
+</script>
+
+
+<div class="pushToBottom30 pushToTop30">
+    <h1>Tab</h1>
+</div>
+<div class="tab" style="margin-bottom: 30px;">
+    <div class="tablinks" onclick="openTab(event, 'Detail')" id="detail">Detail</div>
+    <div class="tablinks" onclick="openTab(event, Terminal)">Terminal</div>
+    <div class="tablinks" onclick="openTab(event, 'BeaconStore')">Beacon Store</div>
+</div>
+<div id="Detail" class="tabcontent">
+    Detail
+</div>
+<div id="Terminal" class="tabcontent">
+    Terminal
+</div>
+<div id="BeaconStore" class="tabcontent">
+    Beacon Store
+</div>
+<script>
+    document.getElementById("detail").click();
+</script>    <div class="pushToBottom30">
+    <h1>Thumbnail</h1>
+</div>
+<div class="thumbnail" id="thumbnail">
+        <div class="thumbnail__header">
+            <span class="photo-total">
+                Ambien
+                <span class="number">
+                    (166 Photos)
+                </span>
+            </span>
+            <span class="photo-action">
+                <span>
+                    Edit
+                </span>
+                <span>
+                    Upload
+                </span>
+            </span>
+        </div>
+        <div class="thumbnail__body">
+            <div class="image__item">
+                <img src="assets/images/img_forest.jpg"/>
+                <div class="thumbnail">
+                    <img src="assets/images/img_forest.jpg"/>
+                    <span class="text">
+                            Thumbnail
+                        </span>
+                </div>
+            </div>
+            <div class="image__item">
+                <img src="assets/images/img_forest.jpg"/>
+                <div class="thumbnail">
+                    <img src="assets/images/img_forest.jpg"/>
+                    <span class="text">
+                                Thumbnail
+                               </span>
+                </div>
+            </div>
+            <div class="image__item">
+                <img src="assets/images/img_forest.jpg"/>
+                <div class="thumbnail">
+                    <img src="assets/images/img_forest.jpg"/>
+                </div>
+            </div>
+            <div class="image__item">
+                <img src="assets/images/img_forest.jpg"/>
+                <div class="thumbnail">
+                    <img src="assets/images/img_forest.jpg"/>
+                    <span class="text">
+                                                                                    Thumbnail
+                                                   </span>
+                </div>
+            </div>
+            <div class="scroll-down">
+                Scroll Down
+            </div>
+        </div>
+        <div class="thumbnail__footer">
+            <Button class="button--large button--primary" id="id-of-button-to-open-it">
+                            Save
+            </Button>
+            <Button class="button--large button--secondary">
+                cancel
+            </Button>
+        </div>
+</div>
+
+        </div>
+</div>
+</body>
+</html>

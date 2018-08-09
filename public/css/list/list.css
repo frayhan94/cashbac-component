@@ -3,10 +3,12 @@
   padding: 15px 20px 15px 20px; }
 
 .list__header {
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
 
 .list__body {
   margin-bottom: 10px; }
+  .list__body .time {
+    margin-bottom: 10px; }
   .list__body .list__item {
     font-size: 12px;
     line-height: 25px;
@@ -29,3 +31,7 @@
       .list__body .time .hours .hours__separator {
         margin-left: 20px;
         margin-right: 20px; }
+      .list__body .time .hours .hours__from input[type=time] {
+        padding: 3px 10px 3px 10px; }
+      .list__body .time .hours .hours__to input[type=time] {
+        padding: 3px 10px 3px 10px; }

@@ -2,10 +2,100 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="../../css/stylesheet.css">
+    <script src="../../js/bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <style>
+            .navigation {
+                position: fixed;
+                left: 0;
+                top: 0;
+                background: #26ade4;
+                width: 200px;
+                height: 100%;
+
+            }
+            .content {
+                position: absolute;
+                left: 200px;
+                right: 11px;
+                padding: 30px;
+            }
+            ul li {
+                list-style: none;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+            }
+            ul li a {
+                font-size: 20px;
+                color: white;
+            }
+            ul li:hover {
+                background: white;
+            }
+            ul li:hover a {
+                color: #26ade4;
+            }
+            .pushToTop30 {
+                margin-top: 30px;
+            }
+            .pushToBottom30 {
+                margin-bottom: 30px;
+            }
+    </style>
 </head>
 <body>
-    {% block content %}{% endblock %}
-
-    <p>Content from our default layout</p>
+<div>
+    <div class="navigation">
+          <ul>
+                <li>
+                    <a href="#">
+                        Form
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        List
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Modal
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Tab
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Thumbnail
+                    </a>
+                </li>
+          </ul>
+    </div>
+    <div class="content">
+            <div class="pushToBottom30">
+                <h1 class="pushToBottom30">
+                    Cashbac Component
+                </h1>
+                <div class="pushToBottom30">
+                A comprehensive UI Module for building website easily. Built with love.
+                </div>
+                 <div class="pushToBottom30">
+                     <h1>
+                        Installation
+                    </h1>
+                </div>
+                    <code >
+                          npm install --save cashbac-component
+                    </code>
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+</div>
 </body>
 </html>

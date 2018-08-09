@@ -21,8 +21,13 @@
   padding: 15px 30px 30px 30px;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
   div {
-    > span {
+    > h3.title {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    > span.sub-title {
       font-size: 12px;
       color: color(--tertiary);
     }

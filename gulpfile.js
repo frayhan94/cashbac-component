@@ -39,7 +39,7 @@ gulp.task('styles', function () {
         .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
         .pipe(concat('stylesheet.css'))
         .pipe(cleanCss())
-        .pipe(gulp.dest('./public/build/css'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -72,7 +72,7 @@ gulp.task('scripts', function() {
             },
             noSource: true
         }))
-        .pipe(gulp.dest('./public/build/js'))
+        .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -98,12 +98,12 @@ gulp.task('stylesheet', function() {
     );
 });
 
-gulp.task('watch',  ['browserSync','stylesheet','scripts'], function() {
+gulp.task('watch',  ['browserSync','stylesheet','scripts','templates'], function() {
     gulp.watch('./component/**/*.scss', ['stylesheet']);
     gulp.watch('./component/**/*.js', ['scripts']);
+    gulp.watch('./src/component/**/*.html', ['templates']);
+    gulp.watch('./src/layout/**/*.html', ['templates']);
 });
-
-
 
 // Gulp task to minify all files
 gulp.task('default', ['clean-js','clean-css'], function () {
@@ -118,8 +118,9 @@ gulp.task('default', ['clean-js','clean-css'], function () {
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: 'dist'
+            baseDir: ['dist','public','node_modules']
         },
+        browser: "google chrome",
     })
 });
 
@@ -127,7 +128,10 @@ gulp.task('browserSync', function() {
 gulp.task('templates', function() {
     return gulp.src('src/*.html') // run the Twig template parser on all .html files in the "src" directory
         .pipe(twig())
-        .pipe(gulp.dest('dist')); // output the rendered HTML files to the "dist" directory
+        .pipe(gulp.dest('dist')) // output the rendered HTML files to the "dist" directory
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 

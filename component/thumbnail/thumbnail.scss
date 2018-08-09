@@ -2,11 +2,108 @@
 @import "../mixin";
 
 .thumbnail {
-  border: 1px solid #ddd;
+  border: 1px solid color(--tertiary);
   border-radius: 4px;
   padding: 5px;
-  width: 150px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow ease-in-out .1s;
   &:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    box-shadow: 0 0 2px 1px color(--tertiary);
+  }
+
+  .thumbnail__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px 20px 15px;
+    .photo-total {
+      font-size: size(--large);
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      .number{
+        color: color(--tertiary);
+      }
+    }
+    .photo-action {
+      font-size: size(--large);
+      color: color(--primary);
+      letter-spacing: 0.3px;
+      &:hover{
+        cursor: pointer;
+      }
+      > span {
+        padding: 5px 15px 5px 15px;
+        margin-right: 15px;
+        transition: background ease-in-out .5s;
+        &:hover {
+          background: color(--tertiary);
+        }
+      }
+    }
+  }
+
+  .thumbnail__body {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .image__item:nth-child(odd) {
+      margin-right: 30px;
+    }
+    .scroll-down {
+      flex-grow: 1;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color: color(--primary);
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .image__item {
+      position: relative;
+      width: 444px;
+      margin-bottom: 30px;
+      .thumbnail {
+        background: color(--secondary);
+        max-width: 100px;
+        height: auto;
+        position: absolute;
+        top: 25px;
+        left: 19px;
+        border-radius: radius(--medium);
+        padding: 5px;
+        > img {
+          padding-left: 3px;
+          padding-right: 3px;
+          padding-top: 4px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        .text {
+          font-size: 10px;
+          text-align: center;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .thumbnail__footer {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+    padding-bottom: 20px;
+    padding-right: 15px;
   }
 }
