@@ -1,12 +1,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="../../css/stylesheet.css">
     <script src="../../js/bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
     <style>
+            @media screen and (max-width: 480px) {
+                h1 {
+                    font-size: 25px;
+                }
+            }
             .navigation {
                 position: fixed;
                 left: 0;
@@ -16,12 +22,26 @@
                 height: 100%;
 
             }
+
             .content {
                 position: absolute;
                 left: 200px;
                 right: 11px;
                 padding: 30px;
             }
+
+             @media screen and (max-width: 480px) {
+                .navigation {
+                    z-index: 2;
+                    left: -200px;
+                }
+                .content {
+                    left: 0;
+                    top: 60px;
+                }
+            }
+
+
             ul li {
                 list-style: none;
                 padding-top: 15px;
@@ -44,34 +64,93 @@
             .pushToBottom30 {
                 margin-bottom: 30px;
             }
+            .guideText {
+                font-size: 18px;
+            }
+            @media screen and (max-width: 480px) {
+                .guideText {
+                    line-height: 28px;
+                }
+                .header--mobile {
+                      background: #26ade4;
+                      position: fixed;
+                      width: 100%;
+                      padding-top: 20px;
+                      padding-bottom: 20px;
+                      z-index: 2;
+                      text-align: center;
+                }
+                .header--mobile h1 {
+                    color: white;
+                    letter-spacing: 1px;
+                }
+                code {
+                    font-size: 12px;
+                }
+            }
+
+            #backToTop {
+                display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 18px;
+              border: none;
+              outline: none;
+              background-color: #26ade4;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+            }
+
+            #backToTop:hover {
+              background-color: #555;
+            }
+
     </style>
+    <script>
+        function ToThumbanail() {
+            document.getElementById("thumbnailTutorial").scrollIntoView();
+        }
+        function ToModal() {
+            document.getElementById("modalTutorial").scrollIntoView();
+        }
+        function ToTab() {
+            document.getElementById("tabTutorial").scrollIntoView();
+        }
+        function ToForm() {
+            document.getElementById("formTutorial").scrollIntoView();
+        }
+    </script>
 </head>
-<body>
+<body onscroll="scrollFunction()">
 <div>
+    <div class="header--mobile">
+        <h1>
+            Cashbac
+        </h1>
+    </div>
     <div class="navigation">
           <ul>
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="ToForm()">
                         Form
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        List
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="#" onclick="ToModal()">
                         Modal
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="ToTab()">
                         Tab
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="ToThumbanail()">
                         Thumbnail
                     </a>
                 </li>
@@ -83,7 +162,9 @@
                     Cashbac Component
                 </h1>
                 <div class="pushToBottom30">
-                A comprehensive UI Module for building website easily. Built with love.
+                    <span class="guideText">
+                        A comprehensive UI Module for building website easily. Built with enthusiast and love.
+                    </span>
                 </div>
                  <div class="pushToBottom30">
                      <h1>
@@ -95,7 +176,8 @@
                     </code>
             </div>
             {% block content %}{% endblock %}
-        </div>
+    </div>
 </div>
+<button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>
 </body>
 </html>

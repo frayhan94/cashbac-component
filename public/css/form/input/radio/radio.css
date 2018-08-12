@@ -1,0 +1,42 @@
+.radio-container {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .radio-container .text {
+    font-size: 11px;
+    margin-top: 3px; }
+  .radio-container input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+  .radio-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%; }
+    .radio-container .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white; }
+  .radio-container:hover input[type=radio] ~ .checkmark {
+    background-color: #ccc; }
+  .radio-container input:checked ~ .checkmark {
+    background-color: #2196F3; }
+    .radio-container input:checked ~ .checkmark:after {
+      display: block; }

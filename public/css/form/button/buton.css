@@ -1,5 +1,7 @@
-button:hover {
-  cursor: pointer; }
+button {
+  transition: all ease-in-out .5s; }
+  button:hover {
+    cursor: pointer; }
 
 .button--large {
   height: 50px;
@@ -14,7 +16,10 @@ button:hover {
 .button--primary {
   border: 0;
   background-color: #26ADE4;
-  color: #ffffff; }
+  color: #ffffff;
+  position: relative; }
+  .button--primary.button--spinner > * {
+    display: none; }
 
 .button--secondary {
   border: 1px solid #C1C1C1;
@@ -23,3 +28,25 @@ button:hover {
 
 .button--rounded {
   border-radius: 25px; }
+
+.button--spinner:after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  border: 2px solid #ffffff;
+  border-top: 3px solid #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: spin 1s infinite linear; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }

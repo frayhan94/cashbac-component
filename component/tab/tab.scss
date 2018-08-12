@@ -7,12 +7,18 @@
   to {opacity: 1;}
 }
 
+.tab--around {
+  justify-content: space-around;
+}
+.tab--between {
+  justify-content: space-between;
+}
+
 .tab {
   overflow: hidden;
   background-color: color(--secondary);
   border: 1px solid color(--secondary-ext-1);
   display: flex;
-  justify-content: space-around;
   border-radius: radius(--medium);
 }
 
@@ -21,40 +27,85 @@
   flex-direction: column;
   div {
     cursor: pointer;
-    padding: 20px 76px;
     background-color: color(--secondary);
     color: color(--primary);
     margin-right: -4px;
     flex-grow: 1;
     flex-shrink: 1;
-    text-align: center;
+    padding-left: 10px;
+    transition: all ease-in-out .2s;
     &.active{
       background-color: color(--primary);
       color: color(--secondary);
     }
-    &:first-child {
-      border-top-left-radius: radius(--medium);
-      border-bottom-left-radius: radius(--medium);
-    }
-    &:last-child {
-      border-top-right-radius: radius(--medium);
-      border-bottom-right-radius: radius(--medium);
+    &:hover {
+      background: color(--primary);
+      color:color(--secondary);
     }
   }
 }
+
+
+.tab--small {
+  div {
+    padding-top: 5px;
+    padding-bottom:  5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+  }
+}
+
+.tab--medium {
+  div {
+    padding-top: 10px;
+    padding-bottom:  10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+  }
+}
+
+
+.tab--large {
+  div {
+    padding-top: 15px;
+    padding-bottom:  15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+  }
+}
+
+
+
 
 
 .pill--small {
   div {
-    padding: 10px 50px;
+    padding-top: 5px;
+    padding-bottom:  5px;
+    font-size: 12px;
   }
-
 }
+
+.pill--medium {
+  div {
+    padding-top: 10px;
+    padding-bottom:  10px;
+    font-size: 14px;
+  }
+}
+
+
 .pill--large {
   div {
-    padding: 20px 76px;
+    padding-top: 15px;
+    padding-bottom:  15px;
+    font-size: 16px;
   }
 }
+
 .tab--pill--horizontal {
   display: flex;
   flex-direction: row;
@@ -74,6 +125,7 @@
       border-bottom-color: color(--primary);
       border-right-color: color(--primary);
       border-left: none;
+      border-width: 1px;
     }
 
     &.active{
@@ -85,6 +137,7 @@
       border-bottom-left-radius: radius(--medium);
       border-style: solid;
       border-left-color: color(--primary);
+      border-width: 1px;
     }
     &:last-child {
       border-top-right-radius: radius(--medium);
@@ -94,6 +147,7 @@
       border-bottom-color: color(--primary);
       border-right-color: color(--primary);
       border-left: none;
+      border-width: 1px;
     }
     &:hover {
       background: color(--primary);
@@ -104,7 +158,6 @@
 .tab {
   div {
     cursor: pointer;
-    padding: 20px 76px;
     transition: border-bottom ease-in-out .1s;
     color: color(--tertiary-ext-1);
     &:hover,

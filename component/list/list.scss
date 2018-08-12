@@ -5,12 +5,16 @@
   padding: 15px 20px 15px 20px;
 }
 .list__header {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .list__body {
   margin-bottom: 10px;
   .time {
     margin-bottom: 10px;
+    @media screen and (max-width: 480px) {
+      flex-direction:  column;
+      margin-bottom: 20px;
+    }
   }
   .list__item {
     font-size: 12px;
@@ -18,6 +22,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
     .text {
 
     }
@@ -33,6 +40,9 @@
     display: flex;
     justify-content: space-between;
     .day {
+      @media screen and (max-width: 480px) {
+        margin-bottom: 10px;
+      }
       > span {
         margin-left: 5px;
         font-size: 12px;
@@ -40,6 +50,11 @@
     }
     .hours {
       display: flex;
+      @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+      }
+
       .hours__separator {
         margin-left: 20px;
         margin-right: 20px;
@@ -56,4 +71,8 @@
       }
     }
   }
+}
+
+.list__footer {
+  font-size: 12px;
 }

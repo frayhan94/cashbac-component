@@ -2,6 +2,7 @@
 @import "../../mixin";
 
 button {
+  transition: all ease-in-out .5s;
   &:hover {
     cursor: pointer;
   }
@@ -24,6 +25,12 @@ button {
   border: 0;
   background-color: #26ADE4;
   color: color(--secondary);
+  position: relative;
+  &.button--spinner {
+    > * {
+      display: none;
+    }
+  }
 }
 
 .button--secondary {
@@ -36,3 +43,30 @@ button {
   border-radius: 25px;
 }
 
+
+.button--spinner:after{
+  content: '';
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  border: 2px solid color(--secondary);
+  border-top:3px solid color(--secondary);
+  border-radius: 100%;
+
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }to{
+     transform: rotate(360deg);
+   }
+}

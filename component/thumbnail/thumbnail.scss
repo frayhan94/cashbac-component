@@ -16,10 +16,18 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 15px 20px 15px;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+
     .photo-total {
       font-size: size(--large);
       font-weight: 600;
       letter-spacing: 0.3px;
+      @media screen and (max-width: 480px) {
+        text-align: center;
+        margin-bottom: 10px;
+      }
       .number{
         color: color(--tertiary);
       }
@@ -28,6 +36,9 @@
       font-size: size(--large);
       color: color(--primary);
       letter-spacing: 0.3px;
+      @media screen and (max-width: 480px) {
+       text-align: center;
+      }
       &:hover{
         cursor: pointer;
       }
@@ -49,6 +60,9 @@
     padding-right: 15px;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
     .image__item:nth-child(odd) {
       margin-right: 30px;
     }
@@ -69,7 +83,13 @@
       position: relative;
       width: 444px;
       margin-bottom: 30px;
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
       .thumbnail {
+        @media screen and (max-width: 480px) {
+          max-width: 70px;
+        }
         background: color(--secondary);
         max-width: 100px;
         height: auto;
@@ -91,6 +111,11 @@
           text-align: center;
           margin-top: 5px;
         }
+      }
+      .action {
+        position: absolute;
+        top: 25px;
+        right: 19px;
       }
     }
   }

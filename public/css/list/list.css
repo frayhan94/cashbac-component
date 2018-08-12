@@ -3,18 +3,25 @@
   padding: 15px 20px 15px 20px; }
 
 .list__header {
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
 
 .list__body {
   margin-bottom: 10px; }
   .list__body .time {
     margin-bottom: 10px; }
+    @media screen and (max-width: 480px) {
+      .list__body .time {
+        flex-direction: column;
+        margin-bottom: 20px; } }
   .list__body .list__item {
     font-size: 12px;
     line-height: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    @media screen and (max-width: 480px) {
+      .list__body .list__item {
+        flex-direction: column; } }
     .list__body .list__item .icon {
       font-size: 10px;
       cursor: pointer; }
@@ -23,11 +30,18 @@
   .list__body .time {
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 480px) {
+      .list__body .time .day {
+        margin-bottom: 10px; } }
     .list__body .time .day > span {
       margin-left: 5px;
       font-size: 12px; }
     .list__body .time .hours {
       display: flex; }
+      @media screen and (max-width: 480px) {
+        .list__body .time .hours {
+          display: flex;
+          flex-direction: column; } }
       .list__body .time .hours .hours__separator {
         margin-left: 20px;
         margin-right: 20px; }
@@ -35,3 +49,6 @@
         padding: 3px 10px 3px 10px; }
       .list__body .time .hours .hours__to input[type=time] {
         padding: 3px 10px 3px 10px; }
+
+.list__footer {
+  font-size: 12px; }

@@ -11,16 +11,26 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 15px 20px 15px; }
+    @media screen and (max-width: 480px) {
+      .thumbnail .thumbnail__header {
+        flex-direction: column; } }
     .thumbnail .thumbnail__header .photo-total {
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.3px; }
+      @media screen and (max-width: 480px) {
+        .thumbnail .thumbnail__header .photo-total {
+          text-align: center;
+          margin-bottom: 10px; } }
       .thumbnail .thumbnail__header .photo-total .number {
         color: #C1C1C1; }
     .thumbnail .thumbnail__header .photo-action {
       font-size: 16px;
       color: #26ADE4;
       letter-spacing: 0.3px; }
+      @media screen and (max-width: 480px) {
+        .thumbnail .thumbnail__header .photo-action {
+          text-align: center; } }
       .thumbnail .thumbnail__header .photo-action:hover {
         cursor: pointer; }
       .thumbnail .thumbnail__header .photo-action > span {
@@ -36,6 +46,9 @@
     padding-right: 15px;
     flex-wrap: wrap;
     justify-content: space-between; }
+    @media screen and (max-width: 480px) {
+      .thumbnail .thumbnail__body {
+        flex-direction: column; } }
     .thumbnail .thumbnail__body .image__item:nth-child(odd) {
       margin-right: 30px; }
     .thumbnail .thumbnail__body .scroll-down {
@@ -53,6 +66,9 @@
       position: relative;
       width: 444px;
       margin-bottom: 30px; }
+      @media screen and (max-width: 480px) {
+        .thumbnail .thumbnail__body .image__item {
+          width: 100%; } }
       .thumbnail .thumbnail__body .image__item .thumbnail {
         background: #ffffff;
         max-width: 100px;
@@ -62,6 +78,9 @@
         left: 19px;
         border-radius: 4px;
         padding: 5px; }
+        @media screen and (max-width: 480px) {
+          .thumbnail .thumbnail__body .image__item .thumbnail {
+            max-width: 70px; } }
         .thumbnail .thumbnail__body .image__item .thumbnail > img {
           padding-left: 3px;
           padding-right: 3px;
@@ -72,6 +91,10 @@
           font-size: 10px;
           text-align: center;
           margin-top: 5px; }
+      .thumbnail .thumbnail__body .image__item .action {
+        position: absolute;
+        top: 25px;
+        right: 19px; }
   .thumbnail .thumbnail__footer {
     display: flex;
     justify-content: flex-end;

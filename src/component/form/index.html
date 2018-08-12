@@ -1,3 +1,4 @@
+<div id="formTutorial" style="padding-top:20px;">
 <div class="pushToBottom30">
     <h1>Form</h1>
 </div>
@@ -8,63 +9,123 @@
             <h3 class="title">Outlet Information</h3>
             <span class="sub-title">Fill below form of your detail outlet</span>
         </div>
-        <div>
-            <label class="switch margin--normal-t">
-                <input type="checkbox">
-                <span class="slider">
-                         <span class="idle" id="idleOutletInformation">
-                             Invisible
+        <div style="display:flex;">
+            <div style="margin-right:20px;">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider">
+                             <span class="idle" id="idleOutletInformation">
+                                 Public
+                             </span>
+                             <span class="active d-none" id="activeOutletInformation">
+                                 Private
+                             </span>
                          </span>
-                         <span class="active d-none" id="activeOutletInformation">
-                             Visible
+                </label>
+            </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round">
+                             <span class="idle" id="idleOutletInformation">
+                                 Invisible
+                             </span>
+                             <span class="active d-none" id="activeOutletInformation">
+                                 Visible
+                             </span>
                          </span>
-                     </span>
-            </label>
+                </label>
+            </div>
         </div>
+
     </div>
 
     <div class="form__body">
-        <div class="row">
-            <div class="column">
-                <div class="margin--medium-b">
+
+        <div class="row column--2">
+                    <div class="horizontal">
+                        <div class="form__label--horizontal">
+                            <label>First Name</label>
+                        </div>
+                        <div class="form__input--error">
+                            <input type="text" class="error__field" placeholder="example: Andrew" />
+                            <span class="error__text">
+                                First Name should be filled in
+                            </span>
+                        </div>
+                    </div>
+                    <div class="horizontal">
+                        <div class="form__label--horizontal">
+                            <label>Last Name</label>
+                        </div>
+                        <div class="form__input--success">
+                            <input type="text" class="success__field" placeholder="example: Condolha"  />
+                        </div>
+                    </div>
+        </div>
+
+
+        <div class="row column--2">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Outlet Name</label>
                 </div>
-                <div>
-                    <input type="text"/>
+                <div class="form__input--error">
+                    <input type="text" class="error__field" placeholder="example: Sinarmas" />
+                    <span class="error__text">
+                        Outlet should be filled in
+                    </span>
                 </div>
             </div>
-            <div class="column">
-                <div class="margin--medium-b">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Phone Number</label>
                 </div>
-                <input type="text"/>
+                <div>
+                    <input type="text" placeholder="example: 08123455432"/>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
-                <div class="margin--medium-b">
+        <div class="row column--2">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Number of POS</label>
                 </div>
-                <input type="text"/>
+                <div>
+                    <input type="text" placeholder="example: 17181"/>
+                </div>
             </div>
-            <div class="column">
-                <div class="margin--medium-b">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Postal Code</label>
                 </div>
-                <input type="text"/>
+                <div>
+                    <input type="text" placeholder="example: 17181"/>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column__one">
-                <div class="margin--small-b">
+        <div class="row column--1">
+            <div>
+                <div>
                     <strong>
                         Do you want to use the same bank account that you set in the merchant section ?
                     </strong>
+                    <label class="radio-container" style="margin-top:10px;">
+                        <span class="text">Yes</span>
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="radio-container">
+                        <span class="text">No</span>
+                        <input type="radio" name="radio">
+                         <span class="checkmark"></span>
+                    </label>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
+        <div class="row column--2">
+            <div class="vertical">
                 <div class="text-vertical__title">
                     Bank Name
                 </div>
@@ -72,7 +133,7 @@
                     Bank Central Asia
                 </div>
             </div>
-            <div class="column">
+            <div class="vertical">
                 <div class="text-vertical__title">
                     Account Name
                 </div>
@@ -81,8 +142,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
+        <div class="row column--2">
+            <div class="vertical">
                 <div class="text-vertical__title">
                     Bank Branch
                 </div>
@@ -90,7 +151,7 @@
                     Padalarang, Bandung
                 </div>
             </div>
-            <div class="column">
+            <div class="vertical">
                 <div class="text-vertical__title">
                     Account Number
                 </div>
@@ -99,8 +160,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
+        <div class="row column--1">
+            <div class="vertical">
                 <div class="text-vertical__title">
                     Email for Payment Report
                 </div>
@@ -109,38 +170,44 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
-                <div class="margin--medium-b">
+        <div class="row column--2">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Name</label>
                 </div>
                 <div>
                     <input type="text"/>
                 </div>
             </div>
-            <div class="column">
-                <div class="margin--medium-b">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Password</label>
                 </div>
-                <input type="password"/>
+                <div>
+                    <input type="password"/>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
-                <div class="margin--medium-b">
+        <div class="row column--2">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Phone Number</label>
                 </div>
-                <input type="text"/>
+                <div>
+                    <input type="text"/>
+                </div>
             </div>
-            <div class="column">
-                <div class="margin--medium-b">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Password Confirm</label>
                 </div>
-                <input type="password"/>
+                <div>
+                    <input type="password"/>
+                </div>
             </div>
         </div>
-        <div class="row--flex">
-            <div class="column--flex column__two">
+        <div class="row column--2">
+            <div class="vertical">
                 <div class="form__group">
                     <div class="form__label--vertical">
                         <label>Latitude</label>
@@ -158,12 +225,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row--flex column__two">
-                <div class="form__label--horizontal">
+            <div class="vertical">
+                <div class="form__label--vertical">
                     <label>Address</label>
                 </div>
                 <div>
-                    <textarea> </textarea>
+                    <textarea style="height:126px;">
+                    </textarea>
                 </div>
             </div>
         </div>
@@ -174,7 +242,7 @@
                     Operation Hours
                 </h3>
             </div>
-            <div class="list__body" style="width:50%;">
+            <div class="list__body">
                 <div class="time">
                     <div class="day">
                         <input type="checkbox"/>
@@ -343,11 +411,14 @@
         </div>
     </div>
     <div class="form__footer">
-        <Button class="button--large button--primary">
-            Save
+        <Button class="button--large button--primary button--spinner">
+            <span>
+                Save
+            </span>
         </Button>
         <Button class="button--large button--secondary">
             Cancel
         </Button>
     </div>
+</div>
 </div>
