@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../../css/stylesheet.css">
     <script src="../../js/bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+    <link rel="icon" href="assets/images/app-icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/app-icon.ico" type="image/x-icon">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
     <style>
             @media screen and (max-width: 480px) {
@@ -299,6 +302,24 @@
                          <span class="checkmark"></span>
                     </label>
                 </div>
+            </div>
+        </div>
+        <div class="row column--1">
+            <div>
+                 <strong>
+                    Your hobi ?
+                </strong>
+                 <label class="checkbox-container" style="margin-top:10px;">
+                    <span class="text">Yes</span>
+                    <input type="checkbox" checked="checked" name="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <span class="text">No</span>
+                    <input type="checkbox" name="checkbox">
+                     <span class="checkmark"></span>
+                </label>
             </div>
         </div>
         <div class="row column--2">
@@ -786,9 +807,9 @@
         </div>
         <div class="thumbnail__body">
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                     <span class="text">
                             Thumbnail
                         </span>
@@ -798,24 +819,24 @@
                 </div>
             </div>
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                     <span class="text">
                                 Thumbnail
                                </span>
                 </div>
             </div>
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                 </div>
             </div>
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                     <span class="text">
                                                                                     Thumbnail
                                                    </span>
@@ -836,7 +857,14 @@
 </div>
 </div>
 
-
+<script>
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+	img.setAttribute('src', img.getAttribute('data-src'));
+	img.onload = function() {
+		img.removeAttribute('data-src');
+	};
+});
+</script>
     </div>
 </div>
 <button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>

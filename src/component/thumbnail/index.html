@@ -21,9 +21,9 @@
         </div>
         <div class="thumbnail__body">
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                     <span class="text">
                             Thumbnail
                         </span>
@@ -33,24 +33,24 @@
                 </div>
             </div>
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                     <span class="text">
                                 Thumbnail
                                </span>
                 </div>
             </div>
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                 </div>
             </div>
             <div class="image__item">
-                <img src="assets/images/img_forest.jpg"/>
+                <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
-                    <img src="assets/images/img_forest.jpg"/>
+                    <img data-src="assets/images/img_forest.jpg"/>
                     <span class="text">
                                                                                     Thumbnail
                                                    </span>
@@ -71,4 +71,11 @@
 </div>
 </div>
 
-
+<script>
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+	img.setAttribute('src', img.getAttribute('data-src'));
+	img.onload = function() {
+		img.removeAttribute('data-src');
+	};
+});
+</script>
