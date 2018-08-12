@@ -1,6 +1,15 @@
 @import "../variable";
 @import "../mixin";
 
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
 .thumbnail {
   border: 1px solid color(--tertiary);
   border-radius: 4px;
