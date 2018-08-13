@@ -902,7 +902,8 @@ hr {
 .tab div {
   cursor: pointer;
   transition: border-bottom ease-in-out .1s;
-  color: #D1D1D1; }
+  color: #D1D1D1;
+  border-bottom: 4px solid transparent; }
   .tab div:hover, .tab div.active {
     border-bottom: 4px solid #26ADE4; }
 
