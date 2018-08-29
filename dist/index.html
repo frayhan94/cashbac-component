@@ -114,6 +114,9 @@
 
     </style>
     <script>
+      function ToAnimation() {
+                document.getElementById("animationTutorial").scrollIntoView();
+        }
         function ToThumbanail() {
             document.getElementById("thumbnailTutorial").scrollIntoView();
         }
@@ -137,6 +140,11 @@
     </div>
     <div class="navigation">
           <ul>
+                <li>
+                      <a href="#" onclick="ToAnimation()">
+                          Animation
+                      </a>
+                </li>
                 <li>
                     <a href="#" onclick="ToForm()">
                         Form
@@ -178,7 +186,16 @@
                           npm install --save cashbac-component
                     </code>
             </div>
-                <div id="formTutorial" style="padding-top:20px;">
+                <div id="animationTutorial" style="padding-top:20px;">
+<div class="pushToBottom30">
+    <h1>Animation</h1>
+</div>
+
+<div class="form pushToBottom30">
+
+</div>
+
+</div>    <div id="formTutorial" style="padding-top:20px;">
 <div class="pushToBottom30">
     <h1>Form</h1>
 </div>
@@ -805,7 +822,7 @@
                 </span>
             </span>
         </div>
-        <div class="thumbnail__body">
+        <div class="thumbnail__body" id="thumbnail-body">
             <div class="image__item">
                 <img data-src="assets/images/img_forest.jpg"/>
                 <div class="thumbnail">
@@ -838,8 +855,8 @@
                 <div class="thumbnail">
                     <img data-src="assets/images/img_forest.jpg"/>
                     <span class="text">
-                                                                                    Thumbnail
-                                                   </span>
+                        Thumbnail
+                    </span>
                 </div>
             </div>
             <div class="scroll-down">
