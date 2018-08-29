@@ -8,6 +8,11 @@ button {
   width: 191px;
   font-size: 16px; }
 
+.button--medium {
+  height: 40px;
+  width: 171px;
+  font-size: 14px; }
+
 .button--small {
   height: 30px;
   width: 151px;

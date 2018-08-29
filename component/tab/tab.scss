@@ -160,6 +160,9 @@
     cursor: pointer;
     transition: border-bottom ease-in-out .1s;
     color: color(--tertiary-ext-1);
+    padding-left: 30px;
+    padding-top: 20px;
+    border-bottom: 4px solid transparent;
     &:hover,
     &.active{
       border-bottom: 4px solid color(--primary);

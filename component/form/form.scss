@@ -159,6 +159,10 @@ strong {
 
 .form__label--vertical {
   margin-bottom: 10px;
+  label {
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
 
 .form__group {
