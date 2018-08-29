@@ -1,10 +1,32 @@
+.form__input textarea,
+.form__input input[type=date],
+.form__input input[type=time],
+.form__input input[type=text],
+.form__input input[type=email],
+.form__input input[type=password] {
+  height: 40px;
+  border: 1px solid #DDDDDD;
+  background-color: rgba(255, 255, 255, 0.87);
+  width: 100%;
+  border-radius: 3px;
+  padding-left: 10px;
+  outline: 0;
+  font-size: 14px; }
+  .form__input textarea:hover,
+  .form__input input[type=date]:hover,
+  .form__input input[type=time]:hover,
+  .form__input input[type=text]:hover,
+  .form__input input[type=email]:hover,
+  .form__input input[type=password]:hover {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12); }
+
 textarea,
 input[type=date],
 input[type=time],
 input[type=text],
 input[type=email],
 input[type=password] {
-  height: 43px;
+  height: 40px;
   border: 1px solid #DDDDDD;
   background-color: rgba(255, 255, 255, 0.87);
   width: 100%;

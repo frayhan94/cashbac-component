@@ -905,7 +905,8 @@ hr {
   color: #D1D1D1;
   padding-left: 30px;
   padding-top: 20px;
-  border-bottom: 4px solid transparent; }
+  border-bottom: 4px solid transparent;
+  font-size: 12px; }
   .tab div:hover, .tab div.active {
     border-bottom: 4px solid #26ADE4; }
 
