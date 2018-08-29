@@ -1,6 +1,6 @@
 {
   "name": "cashbac-component",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Front End depedencies for CB Merchant Webapp ",
   "main": "gulpfile.js",
   "directories": {
