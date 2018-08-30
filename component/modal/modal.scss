@@ -12,7 +12,7 @@
   to {top:0; opacity:1}
 }
 
-.modal {
+.modal-cashbac {
   position: fixed;
   border-radius: radius(--medium);
   display: none;
@@ -27,7 +27,7 @@
   background-color: rgba(0,0,0,0.4);
 }
 
-.modal__content {
+.modal-cashbac__content {
   border-radius: radius(--medium);
   position: relative;
   background-color: #fefefe;
@@ -41,7 +41,7 @@
   animation-duration: 0.4s
 }
 
-.modal__header {
+.modal-cashbac__header {
   background: color(--tertiary-ext-4);
   display: flex;
   flex-direction: row;
@@ -65,7 +65,7 @@
   }
 }
 
-.modal__body {
+.modal-cashbac__body {
   .tab {
     background: color(--tertiary-ext-2);
     div {
@@ -95,7 +95,7 @@
   padding-bottom: 30px;
 }
 
-.modal__footer {
+.modal-cashbac__footer {
   display: flex;
   justify-content: space-between;
   padding: 20px 30px 30px 30px;

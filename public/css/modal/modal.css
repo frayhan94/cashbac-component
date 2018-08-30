@@ -15,7 +15,7 @@
     top: 0;
     opacity: 1; } }
 
-.modal {
+.modal-cashbac {
   position: fixed;
   border-radius: 4px;
   display: none;
@@ -29,7 +29,7 @@
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4); }
 
-.modal__content {
+.modal-cashbac__content {
   border-radius: 4px;
   position: relative;
   background-color: #fefefe;
@@ -42,28 +42,28 @@
   animation-name: animatetop;
   animation-duration: 0.4s; }
 
-.modal__header {
+.modal-cashbac__header {
   background: #202d3d;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 30px 30px 20px 30px; }
-  .modal__header div {
+  .modal-cashbac__header div {
     color: #ffffff; }
-  .modal__header .text .sub-title {
+  .modal-cashbac__header .text .sub-title {
     margin-top: 8px;
     font-size: 12px; }
-  .modal__header .action {
+  .modal-cashbac__header .action {
     display: flex;
     align-items: center; }
-    .modal__header .action:hover {
+    .modal-cashbac__header .action:hover {
       cursor: pointer; }
 
-.modal__body {
+.modal-cashbac__body {
   padding-bottom: 30px; }
-  .modal__body .tab {
+  .modal-cashbac__body .tab {
     background: #ededed; }
-    .modal__body .tab div {
+    .modal-cashbac__body .tab div {
       border: none;
       outline: 0;
       cursor: pointer;
@@ -71,26 +71,26 @@
       transition: border-bottom ease-in-out .1s;
       font-size: 12px;
       color: #d1d1d1; }
-      .modal__body .tab div:active {
+      .modal-cashbac__body .tab div:active {
         border-bottom: 4px solid #26ADE4;
         color: #26ADE4; }
-      .modal__body .tab div:hover {
+      .modal-cashbac__body .tab div:hover {
         border-bottom: 4px solid #26ADE4;
         color: #26ADE4; }
-  .modal__body .fill {
+  .modal-cashbac__body .fill {
     font-size: 12px; }
-    .modal__body .fill .list {
+    .modal-cashbac__body .fill .list {
       box-shadow: none; }
 
-.modal__footer {
+.modal-cashbac__footer {
   display: flex;
   justify-content: space-between;
   padding: 20px 30px 30px 30px;
   background: #ededed; }
-  .modal__footer .left {
+  .modal-cashbac__footer .left {
     align-self: center;
     font-size: 12px; }
-    .modal__footer .left span {
+    .modal-cashbac__footer .left span {
       color: #C1C1C1; }
-  .modal__footer .right {
+  .modal-cashbac__footer .right {
     align-self: center; }
