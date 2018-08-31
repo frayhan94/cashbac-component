@@ -11,8 +11,10 @@
   -ms-user-select: none;
   user-select: none;
   .text {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 3px;
+    font-weight: normal;
+    letter-spacing: 0.8px;
   }
   input[type=checkbox] {
     position: absolute;

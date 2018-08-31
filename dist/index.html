@@ -647,9 +647,9 @@
 </div>
 
 
-<div class="modal" id="sampleModal">
-    <div class="modal__content">
-        <div class="modal__header">
+<div class="modal-cashbac" id="sampleModal">
+    <div class="modal-cashbac__content">
+        <div class="modal-cashbac__header">
             <div class="text">
                 <div class="title">
                     <h3>
@@ -666,7 +666,7 @@
                 </span>
             </div>
         </div>
-        <div class="modal__body">
+        <div class="modal-cashbac__body">
             <div class="tab">
                 <div class="tablinks active" onclick="openTab(event, 'Small')">Informations</div>
                 <div class="tablinks" onclick="openTab(event, 'Medium')">Photos</div>
@@ -696,7 +696,7 @@
 
             </div>
         </div>
-        <div class="modal__footer">
+        <div class="modal-cashbac__footer">
             <div class="left">
                 <span>
                     Check other tabs before you populate
@@ -717,9 +717,9 @@
 </div>
 
 <div class="tab--pill--horizontal pill--small" style="margin-bottom: 30px;">
-        <div class="tablinks" onclick="openTab(event, 'Ambience')" id="defaultPillSmall">Ambience</div>
-        <div class="tablinks" onclick="openTab(event, 'Food')">Food</div>
-        <div class="tablinks" onclick="openTab(event, 'Menu')">Menu</div>
+        <div class="tablinksfirst" onclick="openTab(event, 'tabcontentfirst','tablinksfirst','Ambience')" id="defaultPillSmall">Ambience</div>
+        <div class="tablinksfirst" onclick="openTab(event, 'tabcontentfirst','tablinksfirst','Food')">Food</div>
+        <div class="tablinksfirst" onclick="openTab(event, 'tabcontentfirst','tablinksfirst','Menu')">Menu</div>
 </div>
 
 <div class="tab--pill--horizontal pill--medium" style="margin-bottom: 30px;">
@@ -742,13 +742,13 @@
 </div>
 
 
-<div id="Ambience" class="tabcontent">
+<div id="Ambience" class="tabcontentfirst">
     Ambience
 </div>
-<div id="Food" class="tabcontent">
+<div id="Food" class="tabcontentfirst">
     Food
 </div>
-<div id="Menu" class="tabcontent">
+<div id="Menu" class="tabcontentfirst">
     Menu
 </div>
 <script>
@@ -791,13 +791,13 @@
     <div class="tablinks" onclick="openTab(event, 'BeaconStore')">Beacon Store</div>
 </div>
 
-<div id="Detail" class="tabcontent">
+<div id="Detail" class="tabcontentsecond">
     Detail
 </div>
-<div id="Terminal" class="tabcontent">
+<div id="Terminal" class="tabcontentsecond">
     Terminal
 </div>
-<div id="BeaconStore" class="tabcontent">
+<div id="BeaconStore" class="tabcontentsecond">
     Beacon Store
 </div>
 </div>
